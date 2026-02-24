@@ -43,25 +43,25 @@ const projects: Project[] = [
     features: ["Manajemen menu real-time", "Sistem notifikasi pesanan", "Dashboard admin", "Cart & checkout flow"],
     year: "2024",
   },
- {
-  id: "03",
-  title: "Sistem Penentu Prestasi",
-  subtitle: "Student Achievement Decision Support System",
-  desc: "Sistem pendukung keputusan untuk menentukan siswa berprestasi berdasarkan kriteria penilaian yang terukur dan terstruktur.",
-  longDesc: "Sistem Penentu Prestasi adalah aplikasi berbasis web yang digunakan untuk membantu sekolah dalam menentukan siswa berprestasi secara objektif. Sistem ini menggunakan metode perhitungan seperti SAW (Simple Additive Weighting) untuk menilai siswa berdasarkan berbagai kriteria seperti nilai akademik, kehadiran, sikap, dan prestasi non-akademik. Admin dapat mengelola data siswa, kriteria, dan bobot penilaian, kemudian sistem secara otomatis menghasilkan peringkat siswa berdasarkan hasil perhitungan.",
-  tags: ["PHP", "MySQL", "JavaScript"],
-  color: "#ff61d8",
-  github: "https://github.com/Julius010702/Sistem-Penentu-Prestasi",
-  demo: "https://webpenentuprestasi.free.nf/",
-  features: [
-    "Manajemen data siswa",
-    "Pengelolaan kriteria & bobot penilaian",
-    "Perhitungan otomatis metode SAW",
-    "Perankingan siswa berprestasi",
-    "Laporan hasil seleksi"
-  ],
-  year: "2023",
-}
+  {
+    id: "03",
+    title: "Sistem Penentu Prestasi",
+    subtitle: "Student Achievement Decision Support System",
+    desc: "Sistem pendukung keputusan untuk menentukan siswa berprestasi berdasarkan kriteria penilaian yang terukur dan terstruktur.",
+    longDesc: "Sistem Penentu Prestasi adalah aplikasi berbasis web yang digunakan untuk membantu sekolah dalam menentukan siswa berprestasi secara objektif. Sistem ini menggunakan metode perhitungan seperti SAW (Simple Additive Weighting) untuk menilai siswa berdasarkan berbagai kriteria seperti nilai akademik, kehadiran, sikap, dan prestasi non-akademik.",
+    tags: ["PHP", "MySQL", "JavaScript"],
+    color: "#ff61d8",
+    github: "https://github.com/Julius010702/Sistem-Penentu-Prestasi",
+    demo: "https://webpenentuprestasi.free.nf/",
+    features: [
+      "Manajemen data siswa",
+      "Pengelolaan kriteria & bobot penilaian",
+      "Perhitungan otomatis metode SAW",
+      "Perankingan siswa berprestasi",
+      "Laporan hasil seleksi",
+    ],
+    year: "2023",
+  },
 ];
 
 export default function Projects() {
@@ -78,14 +78,12 @@ export default function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  // Close modal on ESC
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setModalProject(null); };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  // Lock body scroll when modal open
   useEffect(() => {
     document.body.style.overflow = modalProject ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -133,7 +131,6 @@ export default function Projects() {
           -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
 
-        /* ── PROJECT LIST ── */
         .projects-list {
           display: flex; flex-direction: column;
           margin-top: 3rem;
@@ -141,7 +138,6 @@ export default function Projects() {
           border-radius: 1rem; overflow: hidden;
         }
 
-        /* ── CARD HEADER (always visible) ── */
         .project-card {
           border-bottom: 1px solid rgba(255,255,255,0.05);
           position: relative; overflow: hidden;
@@ -161,7 +157,6 @@ export default function Projects() {
           position: relative;
         }
 
-        /* Left accent line */
         .project-card::before {
           content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
           background: var(--card-color); opacity: 0; transition: opacity 0.3s;
@@ -169,7 +164,6 @@ export default function Projects() {
         .project-card:hover::before,
         .project-card.expanded::before { opacity: 1; }
 
-        /* Hover glow */
         .card-glow {
           position: absolute; left: 0; top: 0; bottom: 0; width: 200px;
           background: linear-gradient(90deg, color-mix(in srgb, var(--card-color) 6%, transparent), transparent);
@@ -204,7 +198,6 @@ export default function Projects() {
           font-size: 0.55rem; color: rgba(255,255,255,0.35); letter-spacing: 0.04em;
         }
 
-        /* Right side: actions + chevron */
         .project-header-right {
           display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0;
         }
@@ -222,9 +215,7 @@ export default function Projects() {
           box-shadow: 0 0 10px color-mix(in srgb, var(--card-color) 40%, transparent);
           transform: scale(1.1);
         }
-        .project-icon-btn.disabled {
-          opacity: 0.25; pointer-events: none;
-        }
+        .project-icon-btn.disabled { opacity: 0.25; pointer-events: none; }
 
         .project-chevron {
           display: flex; align-items: center; justify-content: center;
@@ -236,13 +227,12 @@ export default function Projects() {
           transform: rotate(180deg); color: var(--card-color);
         }
 
-        /* ── ACCORDION BODY ── */
         .project-accordion {
           max-height: 0;
           overflow: hidden;
           transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .project-accordion.open { max-height: 500px; }
+        .project-accordion.open { max-height: 600px; }
 
         .project-accordion-inner {
           padding: 0 1.75rem 1.75rem 4.5rem;
@@ -250,11 +240,15 @@ export default function Projects() {
           grid-template-columns: 1fr auto;
           gap: 1.5rem;
           align-items: start;
+          opacity: 1 !important;
+          transform: none !important;
         }
 
         .project-long-desc {
           font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.7;
           margin-bottom: 1rem;
+          opacity: 1 !important;
+          transform: none !important;
         }
 
         .project-features { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -262,6 +256,8 @@ export default function Projects() {
           display: flex; align-items: center; gap: 0.5rem;
           font-family: 'Space Mono', monospace; font-size: 0.62rem;
           color: rgba(255,255,255,0.4);
+          opacity: 1 !important;
+          transform: none !important;
         }
         .project-feature::before {
           content: ''; width: 4px; height: 4px; border-radius: 50%;
@@ -294,21 +290,14 @@ export default function Projects() {
           border: 1px solid rgba(255,255,255,0.1);
           color: rgba(255,255,255,0.4);
         }
-        .accordion-btn-secondary:hover {
-          border-color: rgba(255,255,255,0.25); color: white;
-        }
-        .accordion-btn.disabled {
-          opacity: 0.3; pointer-events: none;
-        }
+        .accordion-btn-secondary:hover { border-color: rgba(255,255,255,0.25); color: white; }
+        .accordion-btn.disabled { opacity: 0.3; pointer-events: none; }
 
-        /* Year badge */
         .project-year {
           font-family: 'Space Mono', monospace; font-size: 0.58rem;
-          color: rgba(255,255,255,0.2); margin-top: 0.75rem;
-          letter-spacing: 0.1em;
+          color: rgba(255,255,255,0.2); margin-top: 0.75rem; letter-spacing: 0.1em;
         }
 
-        /* Detail button at bottom of accordion */
         .accordion-detail-btn {
           display: inline-flex; align-items: center; gap: 0.4rem;
           background: none; border: none; padding: 0; margin-top: 0.5rem;
@@ -318,9 +307,6 @@ export default function Projects() {
         }
         .accordion-detail-btn:hover { opacity: 1; }
 
-        /* ─────────────────────────────
-           MODAL
-        ───────────────────────────── */
         .modal-overlay {
           position: fixed; inset: 0; z-index: 999;
           background: rgba(0,0,0,0.85);
@@ -332,22 +318,17 @@ export default function Projects() {
         @keyframes overlay-in { from { opacity: 0; } to { opacity: 1; } }
 
         .modal-box {
-          position: relative;
-          width: min(680px, 100%);
-          background: #0c0f18;
-          border: 1px solid rgba(255,255,255,0.08);
-          border-radius: 1.25rem;
-          overflow: hidden;
+          position: relative; width: min(680px, 100%);
+          background: #0c0f18; border: 1px solid rgba(255,255,255,0.08);
+          border-radius: 1.25rem; overflow: hidden;
           animation: modal-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-          max-height: 90vh;
-          overflow-y: auto;
+          max-height: 90vh; overflow-y: auto;
         }
         @keyframes modal-in {
           from { opacity: 0; transform: translateY(30px) scale(0.97); }
           to { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        /* Scrollbar inside modal */
         .modal-box::-webkit-scrollbar { width: 3px; }
         .modal-box::-webkit-scrollbar-track { background: transparent; }
         .modal-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 99px; }
@@ -372,8 +353,7 @@ export default function Projects() {
 
         .modal-id {
           font-family: 'Space Mono', monospace; font-size: 0.6rem;
-          color: var(--modal-color); opacity: 0.6; letter-spacing: 0.2em;
-          margin-bottom: 0.4rem;
+          color: var(--modal-color); opacity: 0.6; letter-spacing: 0.2em; margin-bottom: 0.4rem;
         }
         .modal-subtitle {
           font-family: 'Space Mono', monospace; font-size: 0.6rem;
@@ -400,8 +380,7 @@ export default function Projects() {
           color: rgba(255,255,255,0.3); margin-bottom: 0.75rem;
         }
         .modal-desc {
-          font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.75;
-          margin-bottom: 1.75rem;
+          font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.75; margin-bottom: 1.75rem;
         }
 
         .modal-features {
@@ -412,13 +391,11 @@ export default function Projects() {
           display: flex; align-items: flex-start; gap: 0.6rem;
           padding: 0.65rem 0.75rem;
           background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05);
-          border-radius: 0.5rem;
-          font-size: 0.75rem; color: rgba(255,255,255,0.5); line-height: 1.4;
+          border-radius: 0.5rem; font-size: 0.75rem; color: rgba(255,255,255,0.5); line-height: 1.4;
         }
         .modal-feature-dot {
           width: 5px; height: 5px; border-radius: 50%; margin-top: 5px;
-          background: var(--modal-color); box-shadow: 0 0 4px var(--modal-color);
-          flex-shrink: 0;
+          background: var(--modal-color); box-shadow: 0 0 4px var(--modal-color); flex-shrink: 0;
         }
 
         .modal-footer {
@@ -440,43 +417,29 @@ export default function Projects() {
         }
         .modal-btn-primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
         .modal-btn-secondary {
-          background: transparent; color: white;
-          border: 1px solid rgba(255,255,255,0.12);
+          background: transparent; color: white; border: 1px solid rgba(255,255,255,0.12);
         }
         .modal-btn-secondary:hover { border-color: rgba(255,255,255,0.3); }
         .modal-btn.disabled { opacity: 0.3; pointer-events: none; }
 
-        /* Reveal */
         .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .reveal.delay-1 { transition-delay: 0.1s; }
         .reveal.delay-2 { transition-delay: 0.2s; }
-        .reveal.delay-3 { transition-delay: 0.3s; }
-        .reveal.delay-4 { transition-delay: 0.4s; }
         .in-view.reveal { opacity: 1; transform: translateY(0); }
 
-        /* ── MOBILE ── */
         @media (max-width: 768px) {
           .projects-section { padding: 4rem 1.25rem; }
           .projects-title { font-size: clamp(2rem, 10vw, 2.8rem); }
           .projects-list { margin-top: 2rem; border-radius: 0.75rem; }
-
-          .project-card-header {
-            grid-template-columns: 36px 1fr auto;
-            padding: 1.2rem 1.1rem; gap: 0.9rem;
-          }
+          .project-card-header { grid-template-columns: 36px 1fr auto; padding: 1.2rem 1.1rem; gap: 0.9rem; }
           .project-title { font-size: 0.95rem; }
           .project-num { font-size: 0.6rem; }
-
-          .project-accordion-inner {
-            grid-template-columns: 1fr;
-            padding: 0 1.1rem 1.25rem 2.8rem;
-          }
+          .project-accordion-inner { grid-template-columns: 1fr; padding: 0 1.1rem 1.25rem 2.8rem; }
           .project-accordion-actions { flex-direction: row; flex-wrap: wrap; }
-
           .modal-features { grid-template-columns: 1fr; }
           .modal-footer { flex-direction: column; }
           .modal-btn { justify-content: center; }
-          .modal-body { padding: 1.25rem 1.25rem; }
+          .modal-body { padding: 1.25rem; }
           .modal-header { padding: 1.5rem 1.25rem 1.25rem; }
           .modal-footer { padding: 1rem 1.25rem 1.5rem; }
         }
@@ -487,18 +450,20 @@ export default function Projects() {
         }
       `}</style>
 
-      {/* ── MODAL ── */}
+      {/* MODAL */}
       {modalProject && (
         <div
           className="modal-overlay"
-          onClick={(e) => { if (e.target === e.currentTarget) setModalProject(null); }}
+          onClick={(e: React.MouseEvent<HTMLDivElement>) => {
+            if (e.target === e.currentTarget) setModalProject(null);
+          }}
           style={{ "--modal-color": modalProject.color } as React.CSSProperties}
         >
           <div className="modal-box">
             <div className="modal-header">
               <button className="modal-close" onClick={() => setModalProject(null)}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M18 6 6 18M6 6l12 12"/>
+                  <path d="M18 6 6 18M6 6l12 12" />
                 </svg>
               </button>
               <div className="modal-id">PROJECT {modalProject.id} · {modalProject.year}</div>
@@ -512,7 +477,6 @@ export default function Projects() {
             <div className="modal-body">
               <p className="modal-section-title">About this project</p>
               <p className="modal-desc">{modalProject.longDesc}</p>
-
               <p className="modal-section-title">Key Features</p>
               <div className="modal-features">
                 {modalProject.features.map((f) => (
@@ -527,22 +491,25 @@ export default function Projects() {
             <div className="modal-footer">
               <a
                 href={modalProject.demo === "#" ? undefined : modalProject.demo}
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`modal-btn modal-btn-primary${modalProject.demo === "#" ? " disabled" : ""}`}
               >
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
                 </svg>
                 {modalProject.demo === "#" ? "Demo Unavailable" : "Live Demo"}
               </a>
               <a
                 href={modalProject.github}
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="modal-btn modal-btn-secondary"
               >
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                 </svg>
                 GitHub Repo
               </a>
@@ -551,7 +518,7 @@ export default function Projects() {
         </div>
       )}
 
-      {/* ── SECTION ── */}
+      {/* SECTION */}
       <section className="projects-section" ref={sectionRef} id="projects">
         <div className="projects-divider" />
         <div className="projects-bg-text">WORK</div>
@@ -563,22 +530,20 @@ export default function Projects() {
             <span className="projects-title-accent">Built.</span>
           </h2>
 
-          <div className="projects-list reveal delay-2">
-            {projects.map((p, i) => {
+          {/* FIX: hapus reveal dari projects-list dan project-card */}
+          <div className="projects-list">
+            {projects.map((p) => {
               const isExpanded = expandedId === p.id;
               return (
                 <div
                   key={p.id}
-                  className={`project-card reveal delay-${i + 2}${isExpanded ? " expanded" : ""}`}
+                  className={`project-card${isExpanded ? " expanded" : ""}`}
                   style={{ "--card-color": p.color } as React.CSSProperties}
                 >
                   <div className="card-glow" />
 
-                  {/* ── CARD HEADER ── */}
-                  <div
-                    className="project-card-header"
-                    onClick={() => toggleExpand(p.id)}
-                  >
+                  {/* CARD HEADER */}
+                  <div className="project-card-header" onClick={() => toggleExpand(p.id)}>
                     <span className="project-num">{p.id}</span>
 
                     <div className="project-main">
@@ -593,40 +558,46 @@ export default function Projects() {
                       {/* GitHub */}
                       <a
                         href={p.github}
-                        target="_blank" rel="noopener noreferrer"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="project-icon-btn"
                         title="GitHub"
-                        onClick={(e) => e.stopPropagation()}
+                        onClick={(e: React.MouseEvent) => e.stopPropagation()}
                       >
                         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                         </svg>
                       </a>
 
                       {/* Live Demo */}
                       <a
                         href={p.demo === "#" ? undefined : p.demo}
-                        target="_blank" rel="noopener noreferrer"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`project-icon-btn${p.demo === "#" ? " disabled" : ""}`}
                         title={p.demo === "#" ? "Demo tidak tersedia" : "Live Demo"}
-                        onClick={(e) => { e.stopPropagation(); if (p.demo === "#") e.preventDefault(); }}
+                        onClick={(e: React.MouseEvent) => {
+                          e.stopPropagation();
+                          if (p.demo === "#") e.preventDefault();
+                        }}
                       >
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                          <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
                         </svg>
                       </a>
 
-                      {/* Chevron toggle */}
+                      {/* Chevron */}
                       <div className="project-chevron">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                          <path d="m6 9 6 6 6-6"/>
+                          <path d="m6 9 6 6 6-6" />
                         </svg>
                       </div>
                     </div>
                   </div>
 
-                  {/* ── ACCORDION BODY ── */}
+                  {/* ACCORDION BODY */}
                   <div className={`project-accordion${isExpanded ? " open" : ""}`}>
                     <div className="project-accordion-inner">
                       <div>
@@ -642,7 +613,9 @@ export default function Projects() {
                           onClick={() => setModalProject(p)}
                         >
                           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
                           </svg>
                           Lihat detail lengkap
                         </button>
@@ -651,23 +624,26 @@ export default function Projects() {
                       <div className="project-accordion-actions">
                         <a
                           href={p.demo === "#" ? undefined : p.demo}
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className={`accordion-btn accordion-btn-primary${p.demo === "#" ? " disabled" : ""}`}
                           style={{ "--card-color": p.color } as React.CSSProperties}
                         >
                           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
                           </svg>
                           {p.demo === "#" ? "No Demo" : "Live Demo"}
                         </a>
                         <a
                           href={p.github}
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="accordion-btn accordion-btn-secondary"
                         >
                           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                           </svg>
                           GitHub
                         </a>
