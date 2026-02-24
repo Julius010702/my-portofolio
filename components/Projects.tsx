@@ -19,14 +19,14 @@ type Project = {
 const projects: Project[] = [
   {
     id: "01",
-    title: "Sistem SPK SAW",
+    title: "My Portofolio",
     subtitle: "Decision Support System",
     desc: "Sistem pendukung keputusan berbasis metode Simple Additive Weighting untuk evaluasi dan pemilihan alternatif terbaik secara objektif.",
     longDesc: "Sistem ini membantu pengambil keputusan dalam memilih alternatif terbaik menggunakan metode SAW (Simple Additive Weighting). Data kriteria dan bobot dapat dikonfigurasi secara dinamis, hasil perangkingan divisualisasikan dalam tabel dan grafik interaktif.",
-    tags: ["PHP", "MySQL", "Bootstrap"],
+    tags: ["Next.js", "JavaScript", "TypeScript"],
     color: "#00f5c4",
-    github: "https://github.com/juliusdjami/spk-saw",
-    demo: "#",
+    github: "https://github.com/Julius010702/my-portofolio",
+    demo: "https://my-portofolio-five-mauve.vercel.app/#about",
     features: ["Input kriteria & bobot dinamis", "Perhitungan SAW otomatis", "Tabel perangkingan alternatif", "Export hasil ke PDF"],
     year: "2024",
   },
@@ -38,24 +38,30 @@ const projects: Project[] = [
     longDesc: "Platform full-stack untuk pemesanan makanan secara online. Dilengkapi dengan dashboard admin untuk manajemen menu, sistem notifikasi real-time saat pesanan masuk, dan tampilan cart yang responsif untuk pengguna.",
     tags: ["Next.js", "TypeScript", "PostgreSQL"],
     color: "#7b61ff",
-    github: "https://github.com/juliusdjami/food-ordering",
+    github: "https://github.com/Julius010702/pekasaran.git",
     demo: "#",
     features: ["Manajemen menu real-time", "Sistem notifikasi pesanan", "Dashboard admin", "Cart & checkout flow"],
     year: "2024",
   },
-  {
-    id: "03",
-    title: "Sistem Absensi Sekolah",
-    subtitle: "School Attendance System",
-    desc: "Platform manajemen absensi digital untuk sekolah dengan laporan otomatis, notifikasi orang tua, dan dashboard admin.",
-    longDesc: "Sistem absensi digital yang menggantikan proses manual di sekolah. Guru dapat mencatat kehadiran siswa per kelas, sistem secara otomatis mengirim laporan ke orang tua, dan admin dapat memantau rekap absensi seluruh sekolah dari dashboard.",
-    tags: ["PHP", "MySQL", "JavaScript"],
-    color: "#ff61d8",
-    github: "https://github.com/juliusdjami/absensi-sekolah",
-    demo: "#",
-    features: ["Absensi per kelas & mata pelajaran", "Laporan otomatis bulanan", "Notifikasi orang tua", "Rekap dashboard admin"],
-    year: "2023",
-  },
+ {
+  id: "03",
+  title: "Sistem Penentu Prestasi",
+  subtitle: "Student Achievement Decision Support System",
+  desc: "Sistem pendukung keputusan untuk menentukan siswa berprestasi berdasarkan kriteria penilaian yang terukur dan terstruktur.",
+  longDesc: "Sistem Penentu Prestasi adalah aplikasi berbasis web yang digunakan untuk membantu sekolah dalam menentukan siswa berprestasi secara objektif. Sistem ini menggunakan metode perhitungan seperti SAW (Simple Additive Weighting) untuk menilai siswa berdasarkan berbagai kriteria seperti nilai akademik, kehadiran, sikap, dan prestasi non-akademik. Admin dapat mengelola data siswa, kriteria, dan bobot penilaian, kemudian sistem secara otomatis menghasilkan peringkat siswa berdasarkan hasil perhitungan.",
+  tags: ["PHP", "MySQL", "JavaScript"],
+  color: "#ff61d8",
+  github: "https://github.com/Julius010702/Sistem-Penentu-Prestasi",
+  demo: "https://webpenentuprestasi.free.nf/",
+  features: [
+    "Manajemen data siswa",
+    "Pengelolaan kriteria & bobot penilaian",
+    "Perhitungan otomatis metode SAW",
+    "Perankingan siswa berprestasi",
+    "Laporan hasil seleksi"
+  ],
+  year: "2023",
+}
 ];
 
 export default function Projects() {
