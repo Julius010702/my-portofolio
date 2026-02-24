@@ -39,7 +39,7 @@ const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "PostgreSQL"],
     color: "#7b61ff",
     github: "https://github.com/Julius010702/pekasaran.git",
-    demo: "#",
+    demo: "https://sistempemesanan.free.nf/?i=1",
     features: ["Manajemen menu real-time", "Sistem notifikasi pesanan", "Dashboard admin", "Cart & checkout flow"],
     year: "2024",
   },
