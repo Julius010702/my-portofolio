@@ -18,7 +18,23 @@ export const metadata: Metadata = {
   icons: {
     icon: "/ss.png",
   },
+  openGraph: {
+    title: "julius portofolio",
+    description: "My Next.js App",
+    url: "https://my-portofolio-five-mauve.vercel.app",
+    siteName: "julius portofolio",
+    images: [
+      {
+        url: "https://my-portofolio-five-mauve.vercel.app/ss.png",
+        width: 1200,
+        height: 630,
+        alt: "julius portofolio",
+      },
+    ],
+    type: "website",
+  },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
