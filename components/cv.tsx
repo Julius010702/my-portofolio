@@ -45,8 +45,8 @@ const CV_DATA = {
       desc:    "Fokus pada rekayasa perangkat lunak, sistem basis data, dan pemrograman web. IPK: 3.5/4.0",
     },
     {
-      degree:  "SMA SWASTA",
-      school:  "SMAS WINIRAI SABU",
+      degree:  "SMA SWASTA PGRI",
+      school:  "SMAS PGRI WINIRAI SABU",
       period:  "2020 — 2023",
       desc:    "Jurusan IPA.",
     },
