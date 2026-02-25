@@ -410,7 +410,7 @@ export default function Hero() {
               <div className="corner corner-bl" />
               <div className="corner corner-br" />
               <div className="data-tag data-tag-1">SYS: ONLINE</div>
-              <div className="data-tag data-tag-2">ID: JDV·001</div>
+              <div className="data-tag data-tag-2">ID: JD·001</div>
               <div className="data-tag data-tag-3">STATUS: ACTIVE</div>
               <div className="img-scanline" />
               <div className="hero-img-wrap">
@@ -443,7 +443,7 @@ export default function Hero() {
 
               <div className="hero-desc">
                 <span className="c-comment">{`// init developer.profile()`}</span><br />
-                <span className="c-purple">const</span>{" "}role = <span className="c-green">&quot;Web Developer&quot;</span><br />
+                <span className="c-purple">const</span>{" "}role = <span className="c-green">&quot;Full-Stack Web Developer&quot;</span><br />
                 <span className="c-purple">const</span>{" "}passion = <span className="c-green">&quot;Clean Code &amp; UI&quot;</span><br />
                 <span className="c-comment">{`// building digital experiences`}</span>
               </div>
@@ -455,12 +455,12 @@ export default function Hero() {
                 </div>
                 <div className="hero-stat-divider" />
                 <div className="hero-stat">
-                  <span className="hero-stat-num">20+</span>
+                  <span className="hero-stat-num">3+</span>
                   <span className="hero-stat-label">Projects</span>
                 </div>
                 <div className="hero-stat-divider" />
                 <div className="hero-stat">
-                  <span className="hero-stat-num">15+</span>
+                  <span className="hero-stat-num">0+</span>
                   <span className="hero-stat-label">Clients</span>
                 </div>
               </div>

@@ -394,7 +394,7 @@ export default function About() {
             {/* ── Left: text ── */}
             <div className="reveal from-left delay-2">
               <p className="ab-paragraph">
-                Saya adalah seorang <strong>Web Developer</strong> yang passionate dalam membangun pengalaman digital yang bersih, cepat, dan bermakna. Saya percaya bahwa <strong>kode yang baik</strong> bukan hanya yang bekerja — tapi yang mudah dibaca dan dirawat.
+                Saya adalah seorang <strong>Full-Stack Web Developer</strong> yang passionate dalam membangun pengalaman digital yang bersih, cepat, dan bermakna. Saya percaya bahwa <strong>kode yang baik</strong> bukan hanya yang bekerja — tapi yang mudah dibaca dan dirawat.
               </p>
               <p className="ab-paragraph">
                 Dengan fokus pada <strong>frontend modern</strong> dan <strong>backend yang solid</strong>, saya membangun sistem yang tidak hanya indah secara visual tapi juga kuat di balik layar.
@@ -408,12 +408,12 @@ export default function About() {
                 </div>
                 <div className="ab-stat-sep" />
                 <div className="ab-stat">
-                  <div className="ab-stat-num">10+</div>
+                  <div className="ab-stat-num">3+</div>
                   <div className="ab-stat-label">Projects</div>
                 </div>
                 <div className="ab-stat-sep" />
                 <div className="ab-stat">
-                  <div className="ab-stat-num">5+</div>
+                  <div className="ab-stat-num">0+</div>
                   <div className="ab-stat-label">Tech Stack</div>
                 </div>
               </div>
