@@ -97,11 +97,6 @@ const CV_DATA = {
     { title: "Belajar Dasar Pemrograman JavaScript", duration: "46 Jam", rating: 4.85, level: "Dasar",  modules: "11 Modul",  color: "#0369a1", icon: "JS", certUrl: "https://drive.google.com/file/d/1s1g7ziZgwjm4ylxfDT4-jwT9380StIh5/view" },
     { title: "Belajar Dasar AI",                     duration: "10 Jam", rating: 4.67, level: "Dasar",  modules: "39 Modul",  color: "#4f46e5", icon: "AI", certUrl: "https://drive.google.com/file/d/1SPbkXKS9qzWpgROal-V5AWWY-y4fss-S/view" },
     { title: "Belajar Cloud dan Gen AI di AWS",       duration: "18 Jam", rating: 4.62, level: "Dasar",  modules: "99 Modul",  color: "#be185d", icon: "C",  certUrl: "https://drive.google.com/file/d/1EEKY2Slo5WcvCOfSqYV11V8tby6TNCi7/view" },
-    { title: "Memulai Pemrograman dengan Python",     duration: "60 Jam", rating: 4.62, level: "Dasar",  modules: "91 Modul",  color: "#0369a1", icon: "PY", certUrl: "#" },
-    { title: "Belajar Dasar Pemrograman Web",         duration: "45 Jam", rating: 4.67, level: "Dasar",  modules: "131 Modul", color: "#4f46e5", icon: "WB", certUrl: "#" },
-    { title: "Belajar Machine Learning untuk Pemula", duration: "90 Jam", rating: 4.85, level: "Pemula", modules: "117 Modul", color: "#be185d", icon: "ML", certUrl: "#" },
-    { title: "Belajar Back-End Pemula dg JavaScript", duration: "50 Jam", rating: 4.90, level: "Pemula", modules: "126 Modul", color: "#0369a1", icon: "BE", certUrl: "#" },
-    { title: "Belajar Front-End Web untuk Pemula",    duration: "45 Jam", rating: 4.68, level: "Pemula", modules: "69 Modul",  color: "#4f46e5", icon: "FE", certUrl: "#" },
   ],
 };
 
