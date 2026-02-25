@@ -9,21 +9,16 @@ export default function Home() {
   return (
     <>
       <style>{`
-        /* ── Global reset & scroll ── */
         html {
           scroll-behavior: smooth;
           scroll-padding-top: 64px;
         }
-
         body {
           background: #020408;
           color: white;
           margin: 0;
           overflow-x: hidden;
         }
-
-        /* ── Section transitions ── */
-        /* Each section fades into the next via a subtle gradient border */
         .section-connector {
           position: relative;
           height: 0;
@@ -38,57 +33,29 @@ export default function Home() {
           background: linear-gradient(to bottom, rgba(0,245,196,0.3), transparent);
           top: 0;
         }
-
-        /* ── Custom scrollbar ── */
-        ::-webkit-scrollbar {
-          width: 4px;
-        }
-        ::-webkit-scrollbar-track {
-          background: #020408;
-        }
-        ::-webkit-scrollbar-thumb {
-          background: rgba(0,245,196,0.3);
-          border-radius: 99px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-          background: rgba(0,245,196,0.6);
-        }
-
-        /* ── Selection color ── */
-        ::selection {
-          background: rgba(0,245,196,0.2);
-          color: #00f5c4;
-        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #020408; }
+        ::-webkit-scrollbar-thumb { background: rgba(0,245,196,0.3); border-radius: 99px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(0,245,196,0.6); }
+        ::selection { background: rgba(0,245,196,0.2); color: #00f5c4; }
       `}</style>
 
       <Navbar />
 
       <main style={{ background: "#020408", color: "white", overflowX: "hidden" }}>
-        {/* Hero */}
+        {/* Hero — tombol "My CV" ada di sini, membuka modal CV */}
         <Hero />
 
-        {/* Connector */}
         <div className="section-connector" />
-
-        {/* About */}
         <About />
 
-        {/* Connector */}
         <div className="section-connector" style={{ "--connector-color": "#7b61ff" } as React.CSSProperties} />
-
-        {/* Skills */}
         <Skills />
 
-        {/* Connector */}
         <div className="section-connector" style={{ "--connector-color": "#ff61d8" } as React.CSSProperties} />
-
-        {/* Projects */}
         <Projects />
 
-        {/* Connector */}
         <div className="section-connector" />
-
-        {/* Contact */}
         <Contact />
       </main>
     </>
