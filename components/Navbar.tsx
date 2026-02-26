@@ -245,7 +245,7 @@ export default function Navbar() {
         <div className={`nav-bg${scrolled ? " scrolled" : ""}`} />
         <div className="nav-inner">
           <a href="#about" className="nav-logo">
-            <span className="nav-logo-prefix">&gt;</span>
+            <span className="nav-logo-prefix"></span>
             Julius<span>Djami</span>
           </a>
 
