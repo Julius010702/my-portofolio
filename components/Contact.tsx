@@ -326,7 +326,6 @@ export default function Contact() {
               <span className="sep">·</span>
               All Rights Reserved
               <span className="sep">·</span>
-              Built with Next.js
             </span>
           </div>
         </div>

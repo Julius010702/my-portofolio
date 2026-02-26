@@ -32,7 +32,7 @@ const CV_DATA = {
   education: [
     {
       degree: "S1 Teknik Informatika",
-      school: "Universitas STIKOM Artha Buana Kupang",
+      school: "STIKOM Artha Buana Kupang",
       period: "2023 — 2027",
       desc:   "Fokus pada rekayasa perangkat lunak, sistem basis data, dan pemrograman web. IPK: 3.5/4.0",
     },
